@@ -29,7 +29,7 @@ function Playcontainer() {
     return (
         <>
             <div>
-                <PlayViewer value={value} guessedchar={guessedchar} onClickHandler={onClickHandler} />
+                <PlayViewer value={value} guessedchar={guessedchar} onClickHandler={onClickHandler} step={step} />
                 
 
             </div>
