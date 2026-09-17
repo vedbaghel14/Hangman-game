@@ -5,8 +5,9 @@ import PlayViewer from "./PlayViewer";
 function Playcontainer() {
 
     const location = useLocation();
-    let { value } = location.state;
-    value = value.toUpperCase()
+    let value  = (location.state)?.value;
+    let wordhint = (location.state)?.wordhint;
+   if(value) value = value?.toUpperCase()
      const [guessedchar, setGuessedchar] = useState([])
     const [step, setStep] = useState(0)
     
@@ -29,7 +30,8 @@ function Playcontainer() {
     return (
         <>
             <div>
-                <PlayViewer value={value} guessedchar={guessedchar} onClickHandler={onClickHandler} step={step} />
+
+                <PlayViewer value={value} wordhint={wordhint} guessedchar={guessedchar} onClickHandler={onClickHandler} step={step} />
                 
 
             </div>

@@ -3,6 +3,8 @@ import Textinputformcontainer from './components/textinputformcontainer/Textinpu
 import { Routes } from 'react-router-dom'
 import { Route } from 'react-router-dom'
 import Play from './pages/Play'
+import Home from './pages/Home'
+import Singleplayer from './pages/Singleplayer'
 
 
 
@@ -12,9 +14,11 @@ function App() {
 
   return (
     <div className='h-screen w-50vw flex flex-col justify-center items-center'>
-    {/* <Textinputformcontainer /> */}
+   
     <Routes>
-      <Route path='/' element={<Textinputformcontainer />}></Route>
+      <Route path='/' element={<Home />}></Route>  
+      <Route path='/singleplayer' element={<Singleplayer />}></Route>  
+      <Route path='/multiplayer' element={<Textinputformcontainer />}></Route>
       <Route path='/play' element={<Play />}></Route>
     </Routes>
 

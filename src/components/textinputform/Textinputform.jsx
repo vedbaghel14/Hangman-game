@@ -1,13 +1,14 @@
 import Textinput from "../textinput/Textinput"
 import Button from "../Button"
 
-function Textinputform({onClickHandler,onSubmitHandler,inputType,onChangeHandler}){
+function Textinputform({onClickHandler,onSubmitHandler,inputType,onChangeHandler,onChangeHandler2}){
 
 
     return(
         <>
         <form onSubmit={onSubmitHandler}>
             <Textinput type={inputType} placeholder='Enter your word here' text='Enter your word'  onChangeHandler={onChangeHandler}/>
+            <Textinput type={inputType} placeholder='Enter your hint here' text='Enter your hint' onChangeHandler={onChangeHandler2}/>
             <Button text={(inputType=='password')?'show':'hide'} onClickHandler={onClickHandler} styletype='warn'/>
             <Button text='SUBMIT' styletype='success' type="submit" />
         </form>
